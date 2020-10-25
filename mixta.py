@@ -50,8 +50,8 @@ def RunIntegerExampleNaturalLanguageAPI(optimization_problem_type):
         solver.Maximize(50 * x1 + 120 * x2)
         # socolocan las variables a optimizar en un lenguaje natural
         # si son 7 como en el siguiente ejemplo se agregagan 7 "Solver.add" con su ecuaciones
-        solver.Add(1 * x1 + 1 * x2 <= 110)
-        solver.Add(100 * x1 + 200 * x2 <= 10000)
+        solver.Add(1.1 * x1 + 1 * x2 <= 110)
+        solver.Add(100.5 * x1 + 200 * x2 <= 10000)
         solver.Add(10 * x1 + 30 * x2 <= 1200)
         solver.Add(1 * x1 >= 0)
         solver.Add(1 * x2 >= 0)
@@ -147,7 +147,7 @@ def grafica():
     y = -(1 / 3) * x + 40
     y1 = -(1 / 2.444) * x1 + 45
     y2 = -(1 / 2) * x2 + 50
-    y3 = -(1) * x3 + 110
+    y3 = -(1/0.9090) * x3 + 110
     print(y)
 
     plt.plot(x, y, 'm')
@@ -166,7 +166,7 @@ def grafica():
     plt.axhline(y=0, xmin=0.01, xmax=0.95)
     plt.axvline(x=0, ymin=0.01, ymax=0.95)
 
-    plt.plot(60, 20, marker="o", color="red")
+    plt.plot(59, 20, marker="o", color="red")
     plt.fill_between(x, y, where=(x < 60), color='blue')
     plt.fill_between(x2, y2, where=(x2 >= 58), color='blue')
     plt.grid()
