@@ -5,7 +5,8 @@ from ortools.linear_solver import pywraplp
 from tkinter import *
 
 from tkinter.ttk import *
-
+import numpy as np
+from matplotlib import pyplot as plt
 
 def RunIntegerExampleNaturalLanguageAPI(optimization_problem_type):
     raiz1 = Tk()
@@ -58,6 +59,9 @@ def RunIntegerExampleNaturalLanguageAPI(optimization_problem_type):
         # se colocan todas la variables a resolver en el siguiente parentesis
         SolveAndPrint(solver, [x1, x2])
 
+
+
+
     def clicked():
         btn1 = Button(raiz1, text="Solucionar problema", command=clicked1)
         btn1.grid(column=2, row=15)
@@ -104,6 +108,8 @@ def SolveAndPrint(solver, variable_list):
     labelvp.grid(column=1, row=6)
     label = Label(raiz, text='Variables y soluciones: ', font=("Arial Bold", 15))
     label.grid(column=0, row=5)
+    btn4 = Button(raiz, text="grafica", command=grafica)
+    btn4.grid(column=2, row=6)
 
     entero = 6
 
@@ -124,13 +130,47 @@ def Announce(solver, api_type):
 def RunAllIntegerExampleNaturalLanguageAPI():
     if hasattr(pywraplp.Solver, 'CBC_MIXED_INTEGER_PROGRAMMING'):
         Announce('CBC', 'natural language API')
-        RunIntegerExampleNaturalLanguageAPI(
-            pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
+        RunIntegerExampleNaturalLanguageAPI(pywraplp.Solver.CBC_MIXED_INTEGER_PROGRAMMING)
 
 
 def main():
     RunAllIntegerExampleNaturalLanguageAPI()
 
+def grafica():
+    x = np.arange(0, 120, 1)
+    x1 = np.arange(0, 110, 1)
+    x2 = np.arange(0, 100, 1)
+    x3 = np.arange(0, 120, 1)
+    # x=10
+    print(x)
+
+    y = -(1 / 3) * x + 40
+    y1 = -(1 / 2.444) * x1 + 45
+    y2 = -(1 / 2) * x2 + 50
+    y3 = -(1) * x3 + 110
+    print(y)
+
+    plt.plot(x, y, 'm')
+    plt.axhline(y=0, xmin=0.01, xmax=0.95)
+    plt.axvline(x=0, ymin=0.01, ymax=0.95)
+
+    plt.plot(x1, y1, 'm')
+    plt.axhline(y=0, xmin=0.01, xmax=0.95)
+    plt.axvline(x=0, ymin=0.01, ymax=0.95)
+
+    plt.plot(x2, y2, 'm')
+    plt.axhline(y=0, xmin=0.01, xmax=0.95)
+    plt.axvline(x=0, ymin=0.01, ymax=0.95)
+
+    plt.plot(x3, y3, 'm')
+    plt.axhline(y=0, xmin=0.01, xmax=0.95)
+    plt.axvline(x=0, ymin=0.01, ymax=0.95)
+
+    plt.plot(60, 20, marker="o", color="red")
+    plt.fill_between(x, y, where=(x < 60), color='blue')
+    plt.fill_between(x2, y2, where=(x2 >= 58), color='blue')
+    plt.grid()
+    plt.show()
 
 if __name__ == '__main__':
     main()
