@@ -52,5 +52,5 @@ En este documento explicamos el funcionamiento de Branch and Bound (Ramificació
 Generalmente los problemas de la PEM tienen la siguiente estructura:
 <dd>
     <h4>Estructura problemas de la PEM<br></h4>
-    <img style="width: 700px; height: 400px;" src="https://user-images.githubusercontent.com/49535609/95492084-2f4cba00-0960-11eb-923c-45237f66e708.jpg" alt="Hola">
+    <img style="width: 700px; height: 400px;" src="https://user-images.githubusercontent.com/54086394/97123732-1a5f7d00-16fb-11eb-8867-11a2784d379d.png" alt="Hola">
 </dd>
