@@ -54,3 +54,7 @@ Generalmente los problemas de la PEM tienen la siguiente estructura:
     <h4>Estructura problemas de la PEM<br></h4>
     <img style="width: 700px; height: 400px;" src="https://user-images.githubusercontent.com/54086394/97123732-1a5f7d00-16fb-11eb-8867-11a2784d379d.png" alt="Hola">
 </dd>
+<h4>Resumen del algoritmo de ramificación y acotamiento de PEM<br></h4>
+<p> <h4>Paso inicial</h4> <p> Se establece Z* = - ∞. Se aplica el paso de acotamiento, el paso de sondeo y la prueba de optimalidad que se describe después del problema completo. Si no queda sondeado, se clasifica este problema como el único subproblema restante para realizar la primera iteración completa. </p>
+</p> 
+</p>
