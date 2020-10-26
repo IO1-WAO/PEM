@@ -20,12 +20,15 @@
     <li>
       <h4>Descripcion del proyecto</h4>
       <p>Algoritmo en python que soluciona problemas de programacion entera-mixta, con graficos mediante el uso de la libreria Matplotlib.</p>
-        <h4>¿Que es la programacion entera-mixta?</h4>
-        <p>Para hablar de la programacion entera - mixta, primero se debe hablar de la programacion entera, a la cual pertenece. <br> La programacion lineal entera es una tecnica que permite modelar y resolver problemas cuya caracterıstica principal es que el conjunto de soluciones factibles es discreto. <br> A veces, algunas variables pueden ser enteras y otras continuas, en este caso hablamos de programacion lineal entera mixta. 
-        </p>
     </li>
   <li>
 <h4>Resumen</h4>
+    <h4>¿Que es la programacion entera-mixta?</h4>
+        <p>Para hablar de la programacion entera - mixta, primero se debe hablar de la programacion entera, a la cual pertenece. <br> 
+           La programacion lineal entera es una tecnica que permite modelar y resolver problemas cuya caracterıstica principal
+           es que el conjunto de soluciones factibles es discreto. A veces, algunas variables pueden ser enteras y otras continuas, en
+           este caso hablamos de programacion lineal entera mixta. 
+        </p>
 <p>La programación entera mixta (PEM), es un caso de la programación entera donde algunas variables (por ejemplo, 1 de ellas) pueden no estar restringidas a valores enteros, por lo que es incorrecto usar el corte fraccional que se usaba en la rama de el algoritmo de la programación entera fraccional (entero puro).. Sin embargo puede emplearse un nuevo corte basado en la misma idea general, como se verá a continuación .
 </p>
  </li>
