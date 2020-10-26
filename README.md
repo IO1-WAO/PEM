@@ -68,5 +68,5 @@ xj >= [xj*] + 1.
   <p> Se aplican las pruebas de sondeo que se presentan a continuación a cada nuevo subproblema y se descartan aquellos que quedan sondeados por cualquiera de las pruebas.
 Prueba 1: Su cota <= Z*, donde Z* es el valor de Z en la solución de apoyo actual. Prueba 2: Su relajamiento de PL no tiene soluciones factibles.
 Prueba 3: La solución óptima para su relajamiento de PL tiene valores enteros en todas sus variables restringidas a enteros. (Si esta solución es mejor que la de apoyo, se convierte en la nueva solución de apoyo y se vuelve a aplicar la prueba 1 con la nueva Z* a todos los subproblemas no sondeados.)
-Prueba de optimalidad: El proceso se detiene cuando no hay subproblemas restantes; la solución de apoyo actual es óptima.8 De otra manera, se realiza otra iteración.</p>
+Prueba de optimalidad: El proceso se detiene cuando no hay subproblemas restantes; la solución de apoyo actual es óptima. De otra manera, se realiza otra iteración.</p>
 </p>
