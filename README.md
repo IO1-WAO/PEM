@@ -39,3 +39,13 @@ Muchos problemas de decisión involucran no solo variables que pueden representa
 Estos problemas de optimización híbridos con variables reales y enteras se denominan de programación entera mixta. Es de modelo Lineal (vistas en P.L.) agregando que las variables de decisión deben ser enteras. Otras veces, el planteamiento del problema involucra, junto a los modelos cuantitativos, reglas o condiciones lógicas adicionales.
 Estos problemas de optimización híbridos con variables reales y enteras se denominan de programación mixta entera  Si las decisiones son solo de tipo entero el problema se denomina de programación entera. 
 </p>
+<h4>Métodos de solución</h4>
+<ul>
+        <li>La aproximación de tratar las variables enteras como reales y luego aproximarse al entero más próximo suele dar resultados erróneos, excepto quizás cuando el número de valores posibles de una variable entera es alto. Rara vez con variables binarias</li>
+        <li>
+Examen inteligente de alternativas enteras: Branch and Bound (B&B), siendo de los más efectivos para este tipos de problemas.</li>>
+    </ul>
+  
+En este documento explicamos el funcionamiento de Branch and Bound (Ramificación y acotamiento) para la problemas de programación entera mixta
+
+Generalmente los problemas de la PEM tienen la siguiente estructura:
