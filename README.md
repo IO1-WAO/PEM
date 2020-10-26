@@ -4,7 +4,7 @@
 <h3>Andres Felipe Wilches Torres -20172020114, Nicolas Andrade Perdomo - 20172020097 y Luis Alejandro Ocampo Gamboa - 20172020050</h3>
 
   <dt>
-            Tabla de contenidos
+            <h3>Tabla de contenidos</h3>
         </dt>
         <dd>
             <ul>
