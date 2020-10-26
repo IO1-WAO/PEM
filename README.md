@@ -58,11 +58,17 @@ Generalmente los problemas de la PEM tienen la siguiente estructura:
 <p> <h4>Paso inicial</h4> <p> Se establece Z* = - ∞. Se aplica el paso de acotamiento, el paso de sondeo y la prueba de optimalidad que se describe después del problema completo. Si no queda sondeado, se clasifica este problema como el único subproblema restante para realizar la primera iteración completa. </p>
 </p> 
 <h4>Pasos de cada iteración:</h4>
- <li>
       <h4>Ramificación:</h4>
       <p>Entre los subproblemas restantes (no sondeados), se selecciona el de creación más reciente. (Los empates se rompen con la cota más grande.) Entre las variables restringidas a enteros, que tienen valores no enteros en la solución óptima del relajamiento de PL del subproblema, se elige la primera en el orden natural como la variable de ramificación. Si xj es esta variable y xj * su valor en esta solución, se debe ramificar desde el nodo del subproblema para crear dos nuevos subproblemas luego de agregar las restricciones respectivas xj <= [xj *] y
 xj >= [xj*] + 1.
 </p>
-    </li>
-  <li>
+  <h4>Acotamiento:</h4>
+  <p>Se obtiene la cota de cada subproblema si se aplica el método símplex (o el método símplex dual si se re optimiza) al relajamiento de PL y se utiliza el valor de Z para la solución óptima resultante.</p>
+  <h4>Sondeo:</h4>
+  <pSe aplican las pruebas de sondeo que se presentan a continuación a cada nuevo subproblema y se descartan aquellos que quedan sondeados por cualquiera de las pruebas.
+Prueba 1: Su cota <= Z*, donde Z* es el valor de Z en la solución de apoyo actual. Prueba 2: Su relajamiento de PL no tiene soluciones factibles.
+Prueba 3: La solución óptima para su relajamiento de PL tiene valores enteros en todas sus variables restringidas a enteros. (Si esta solución es mejor que la de apoyo, se convierte en la nueva solución de apoyo y se vuelve a aplicar la prueba 1 con la nueva Z* a todos los subproblemas no sondeados.)
+Prueba de optimalidad: El proceso se detiene cuando no hay subproblemas restantes; la solución de apoyo actual es óptima.8 De otra manera, se realiza otra iteración.</p>
 </p>
+ </li>
+<li><h4>Objetivos</h4></li>
