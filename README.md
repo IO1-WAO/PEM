@@ -2,7 +2,7 @@
 <h1>Universidad Distrital Francisco Jose de Caldas</h1>
 <h2>Integrantes:</h2>
 <h3>Andres Felipe Wilches Torres -20172020114, Nicolas Andrade Perdomo - 20172020097 y Luis Alejandro Ocampo Gamboa - 20172020050</h3>
-<h5>Descripcion del proyecto</h5>
+<h4>Descripcion del proyecto</h4>
 <p>Algoritmo en python que soluciona problemas de programacion entera-mixta, con graficos mediante el uso de la libreria Matplotlib</p>
 
 <ol>
