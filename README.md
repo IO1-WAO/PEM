@@ -16,8 +16,6 @@
                 <li>Bibliografia</li>
             </ul>
         </dd>
-
-
 <ol>
     <li>
       <h4>Descripcion del proyecto</h4>
@@ -28,3 +26,8 @@
         </p>
     </li>
   <li>
+<h4>Resumen</h4>
+<p>La programación entera mixta (PEM), es un caso de la programación entera donde algunas variables (por ejemplo, 1 de ellas) pueden no estar restringidas a valores enteros, por lo que es incorrecto usar el corte fraccional que se usaba en la rama de el algoritmo de la programación entera fraccional (entero puro).. Sin embargo puede emplearse un nuevo corte basado en la misma idea general, como se verá a continuación .
+</p>
+ </li>
+<li><h4>Introduccion</h4></li>
