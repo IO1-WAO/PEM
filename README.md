@@ -24,7 +24,7 @@
   <li>
 <h4>Resumen</h4>
     <h4>¿Que es la programacion entera-mixta?</h4>
-        <p style=»text-align: justify;»>Para hablar de la programacion entera - mixta, primero se debe hablar de la programacion entera, a la cual pertenece. <br> 
+        <p align="justify">Para hablar de la programacion entera - mixta, primero se debe hablar de la programacion entera, a la cual pertenece. <br> 
            La programacion lineal entera es una tecnica que permite modelar y resolver problemas cuya caracterıstica principal
            es que el conjunto de soluciones factibles es discreto. A veces, algunas variables pueden ser enteras y otras continuas, en
            este caso hablamos de programacion lineal entera mixta. 
