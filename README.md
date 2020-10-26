@@ -41,10 +41,11 @@ Estos problemas de optimización híbridos con variables reales y enteras se den
 </p>
 <h4>Métodos de solución</h4>
 <ul>
-        <li>La aproximación de tratar las variables enteras como reales y luego aproximarse al entero más próximo suele dar resultados erróneos, excepto quizás cuando el número de valores posibles de una variable entera es alto. Rara vez con variables binarias</li>
+        <li>La aproximación de tratar las variables enteras como reales y luego aproximarse al entero más
+            próximo suele dar resultados erróneos, excepto quizás cuando el número de valores posibles de una variable entera es alto. Rara vez con variables binarias</li>
         <li>
-Examen inteligente de alternativas enteras: Branch and Bound (B&B), siendo de los más efectivos para este tipos de problemas.</li>>
-    </ul>
+            Examen inteligente de alternativas enteras: Branch and Bound (B&B), siendo de los más efectivos para este tipos de problemas.</li>
+</ul>
   
 En este documento explicamos el funcionamiento de Branch and Bound (Ramificación y acotamiento) para la problemas de programación entera mixta
 
