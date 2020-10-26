@@ -33,3 +33,9 @@
 </p>
  </li>
 <li><h4>Introduccion</h4></li>
+  <p>En algunas situaciones que pueden representarse con modelos lineales nos encontramos con que sólo tienen sentido aquellas soluciones de la región factible que son enteras, así pueden representarse mediante modelos matemáticos ligeramente diferentes a los de programación lineal. Si todas las variables son enteras tenemos un problema de programación lineal entera, si sólo algunas deben serlo se trata de un problema de programación lineal mixta. Programación Entera es un término general para los modelos de programación matemática que presentan condiciones de integridad (condiciones que estipulan que algunas o todas las variables de decisión deben tener valores enteros).
+
+Muchos problemas de decisión involucran no solo variables que pueden representarse por valores reales, sino decisiones de tipo discreto que están representadas de forma natural por variables enteras o binarias.
+Estos problemas de optimización híbridos con variables reales y enteras se denominan de programación entera mixta. Es de modelo Lineal (vistas en P.L.) agregando que las variables de decisión deben ser enteras. Otras veces, el planteamiento del problema involucra, junto a los modelos cuantitativos, reglas o condiciones lógicas adicionales.
+Estos problemas de optimización híbridos con variables reales y enteras se denominan de programación mixta entera  Si las decisiones son solo de tipo entero el problema se denomina de programación entera. 
+</p>
