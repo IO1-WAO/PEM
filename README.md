@@ -47,6 +47,6 @@ Estos problemas de optimización híbridos con variables reales y enteras se den
             Examen inteligente de alternativas enteras: Branch and Bound (B&B), siendo de los más efectivos para este tipos de problemas.</li>
 </ul>
   
-En este documento explicamos el funcionamiento de Branch and Bound (Ramificación y acotamiento) para la problemas de programación entera mixta
+En este documento explicamos el funcionamiento de Branch and Bound (Ramificación y acotamiento) para la problemas de programación entera mixta<br>
 
 Generalmente los problemas de la PEM tienen la siguiente estructura:
