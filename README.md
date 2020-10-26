@@ -50,3 +50,7 @@ Estos problemas de optimización híbridos con variables reales y enteras se den
 En este documento explicamos el funcionamiento de Branch and Bound (Ramificación y acotamiento) para la problemas de programación entera mixta<br>
 
 Generalmente los problemas de la PEM tienen la siguiente estructura:
+<dd>
+    <h4>Estructura problemas de la PEM<br></h4>
+    <img style="width: 700px; height: 400px;" src="https://user-images.githubusercontent.com/49535609/95492084-2f4cba00-0960-11eb-923c-45237f66e708.jpg" alt="Hola">
+</dd>
