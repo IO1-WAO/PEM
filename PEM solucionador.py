@@ -1,4 +1,6 @@
 # Nos ayuda en la interfaz que hay entre el usuario y el programa
+#AndresFWilT, Zapo_el_qlo_lea, luisogc
+#U.D.F.J.C
 from tkinter import *
 import tkinter as tk
 
@@ -415,21 +417,28 @@ class Inecuaciones(Calcular_Puntos):
         self.__numIne = int(x)
         # Matriz donde se guardan los campos de las inecuaciones
         self.__Inecuaciones = []
+        self.__Enteros = []
         self.__CalcularPuntos = None
 
         # Inicializando la matriz
         for i in range(self.__numIne):
             self.__Inecuaciones.append([])
+            self.__Enteros.append([])
             for j in range(4):
                 self.__Inecuaciones[i].append(None)
+                self.__Enteros[i].append(None)
 
     def iniciar(self):
         # Creando los campos para las inecuaciones
         for i in range(self.__numIne):
+            self.__Enteros[i] = tk.Checkbutton(marco, width=7)
+            self.__Enteros[i].pack()
+            self.__Enteros[i].place(x=250, y=i * 30 + 125)
+            self.__Enteros[i].configure(background ="#000000")
             for j in range(4):
                 self.__Inecuaciones[i][j] = tk.Entry(marco, width=7)
                 self.__Inecuaciones[i][j].pack()
-                self.__Inecuaciones[i][j].place(x=j * 100 + 100, y=i * 30 + 150)
+                self.__Inecuaciones[i][j].place(x=j * 100 + 350, y=i * 30 + 125)
 
                 if j == 2:
                     if i >= self.__numIne - 2:
@@ -467,83 +476,131 @@ def calc_ine():
     objeto.iniciar()
 
     # Boton para enviar inecuaciones
-    btnCalcular = Button(marco, text="Calcular", command=objeto.hacer_algo, width=10)
+    btnCalcular = Button(marco, text="Solucionar", command=objeto.hacer_algo, width=10)
     btnCalcular.pack()
-    btnCalcular.place(x=500, y=200)
+    btnCalcular.place(x=760, y=225)
 
 
 # Crea el marco
 marco = tk.Tk()
-marco.title("PEM")
-marco.geometry("600x400")
-marco.configure(background="#5DA0FF")
+marco.title("Programacion entera mixta (PEM)")
+marco.geometry("900x400")
+marco.configure(background="#000000")
 
 # Etiquetas
-lbl1 = tk.Label(marco, text="Función objetivo: ")
+lbl1 = tk.Label(marco, text="Función objetivo:          Z =")
 lbl1.pack()
-lbl1.configure(background="#5DA0FF")
+lbl1.config(background="#000000")
+lbl1.config(foreground="#ffffff")
 lbl1.place(x=0, y=30)
 
 lbl2 = tk.Label(marco, text="X      +")
 lbl2.pack()
-lbl2.configure(background="#5DA0FF")
-lbl2.place(x=230, y=30)
+lbl2.config(background="#000000")
+lbl2.config(foreground="#ffffff")
+lbl2.place(x=215, y=30)
 
 lbl3 = tk.Label(marco, text="Y")
 lbl3.pack()
-lbl3.configure(background="#5DA0FF")
-lbl3.place(x=380, y=30)
+lbl3.config(background="#000000")
+lbl3.config(foreground="#ffffff")
+lbl3.place(x=325, y=30)
 
-lbl4 = tk.Label(marco, text="max o min")
+lbl4 = tk.Label(marco, text="max/min")
 lbl4.pack()
-lbl4.configure(background="#5DA0FF")
-lbl4.place(x=530, y=30)
+lbl4.config(background="#000000")
+lbl4.config(foreground="#ffffff")
+lbl4.place(x=415, y=10)
 
-lbl5 = tk.Label(marco, text="Digite el numero de inecuaciones: ")
+lbl5 = tk.Label(marco, text="Cantidad de restricciones: ")
 lbl5.pack()
-lbl5.configure(background="#5DA0FF")
-lbl5.place(x=0, y=90)
+lbl5.config(background="#000000")
+lbl5.config(foreground="#ffffff")
+lbl5.place(x=525, y=30)
 
 lbl6 = tk.Label(marco, text="")
 lbl6.pack()
-lbl6.configure(background="#5DA0FF")
+lbl6.config(background="#000000")
+lbl6.config(foreground="#ffffff")
 lbl6.place(x=100, y=350)
 
 lbl7 = tk.Label(marco, text="Coef X")
 lbl7.pack()
-lbl7.configure(background="#5DA0FF")
-lbl7.place(x=100, y=120)
+lbl7.config(background="#000000")
+lbl7.config(foreground="#ffffff")
+lbl7.place(x=350, y=100)
 
 lbl8 = tk.Label(marco, text="Coef Y")
 lbl8.pack()
-lbl8.configure(background="#5DA0FF")
-lbl8.place(x=200, y=120)
+lbl8.config(background="#000000")
+lbl8.config(foreground="#ffffff")
+lbl8.place(x=450, y=100)
+
+lbl13 = tk.Label(marco, text="Entero")
+lbl13.pack()
+lbl13.config(background="#000000")
+lbl13.config(foreground="#ffffff")
+lbl13.place(x=265, y=100)
+
+lbl9 = tk.Label(marco, text="SUJETO A (S.A):  ")
+lbl9.pack()
+lbl9.config(background="#000000")
+lbl9.config(foreground="#ffffff")
+lbl9.place(x=225, y=75)
+
+lbl10 = tk.Label(marco, text="Andres Felipe Wilches Torres - 20172020114")
+lbl10.pack()
+lbl10.config(background="#000000")
+lbl10.config(foreground="#ffffff")
+lbl10.place(x=0, y=375)
+
+lbl11 = tk.Label(marco, text="Nicolas Andrade Perdomo - 20172020097")
+lbl11.pack()
+lbl11.config(background="#000000")
+lbl11.config(foreground="#ffffff")
+lbl11.place(x=330, y=375)
+
+lbl12 = tk.Label(marco, text="Luis Alejandro Ocampo Gamboa - 20172020050")
+lbl12.pack()
+lbl12.config(background="#000000")
+lbl12.config(foreground="#ffffff")
+lbl12.place(x=640, y=375)
+
+lbl12 = tk.Label(marco, text="Universidad Distrital Francisco Jose de Caldas (U.D.F.J.C)")
+lbl12.pack()
+lbl12.config(background="#000000")
+lbl12.config(foreground="#ffffff")
+lbl12.place(x=0, y=350)
 
 # Funcion objetivo
 fObj1 = tk.Entry(marco, width=10)
 fObj1.pack(anchor=CENTER)
-fObj1.config(background="#CDF0FE")
+fObj1.config(background="#ffffff")
+fObj1.config(foreground="#000000")
 fObj1.place(x=150, y=30)
 
 fObj2 = tk.Entry(marco, width=10)
 fObj2.pack(anchor=CENTER)
-fObj2.config(background="#CDF0FE")
-fObj2.place(x=300, y=30)
+fObj2.config(background="#ffffff")
+fObj2.config(foreground="#000000")
+fObj2.place(x=260, y=30)
 
 fObj3 = tk.Entry(marco, width=10)
 fObj3.pack(anchor=CENTER)
-fObj3.config(background="#CDF0FE")
-fObj3.place(x=450, y=30)
+fObj3.config(background="#ffffff")
+fObj3.config(foreground="#000000")
+fObj3.place(x=410, y=30)
 
 # Inecuaciones
 numIne = tk.Entry(marco, width=10)
 numIne.pack(anchor=CENTER)
-numIne.config(background="#6CD5FF")
-numIne.place(x=200, y=90)
+numIne.config(background="#ffffff")
+numIne.config(foreground="#000000")
+numIne.place(x=675, y=30)
 
 # Boton enviar inecuaciones
-btnEnviar = tk.Button(marco, text="Enviar", command=calc_ine, width=10)
+btnEnviar = tk.Button(marco, text="Crear", command=calc_ine, width=10)
 btnEnviar.pack()
-btnEnviar.place(x=350, y=90)
+btnEnviar.place(x=760, y=30)
 
 marco.mainloop()
