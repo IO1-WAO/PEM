@@ -446,7 +446,9 @@ class Inecuaciones(Calcular_Puntos):
                         self.__Inecuaciones[i][j].config(state="readonly")
                     else:
                         self.__Inecuaciones[i][j].insert(0, "<=")
-
+        if self.__numIne >= 10:
+            print("Muchas inecuaciones")
+            ##Crear scrollbar
         # Se muestran las inecuaciones de positividad de las variables
         self.__Inecuaciones[self.__numIne - 2][0].insert(0, "1")
         self.__Inecuaciones[self.__numIne - 2][0].config(state="readonly")
@@ -469,7 +471,6 @@ class Inecuaciones(Calcular_Puntos):
         Calcular_Puntos.graficar(self)
         Calcular_Puntos.region_factible(self)
 
-
 # Funcion para llamar a la clase Inecuaciones
 def calc_ine():
     objeto = Inecuaciones(numIne.get())
@@ -486,6 +487,7 @@ marco = tk.Tk()
 marco.title("Programacion entera mixta (PEM)")
 marco.geometry("900x400")
 marco.configure(background="#000000")
+marco.resizable(0,0)
 
 # Etiquetas
 lbl1 = tk.Label(marco, text="Función objetivo:          Z =")
@@ -558,19 +560,19 @@ lbl11 = tk.Label(marco, text="Nicolas Andrade Perdomo - 20172020097")
 lbl11.pack()
 lbl11.config(background="#000000")
 lbl11.config(foreground="#ffffff")
-lbl11.place(x=330, y=375)
+lbl11.place(x=0, y=350)
 
 lbl12 = tk.Label(marco, text="Luis Alejandro Ocampo Gamboa - 20172020050")
 lbl12.pack()
 lbl12.config(background="#000000")
 lbl12.config(foreground="#ffffff")
-lbl12.place(x=640, y=375)
+lbl12.place(x=0, y=325)
 
-lbl12 = tk.Label(marco, text="Universidad Distrital Francisco Jose de Caldas (U.D.F.J.C)")
+lbl12 = tk.Label(marco, text="Universidad Distrital Francisco Jose de Caldas")
 lbl12.pack()
 lbl12.config(background="#000000")
 lbl12.config(foreground="#ffffff")
-lbl12.place(x=0, y=350)
+lbl12.place(x=0, y=300)
 
 # Funcion objetivo
 fObj1 = tk.Entry(marco, width=10)
