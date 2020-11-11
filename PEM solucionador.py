@@ -527,7 +527,7 @@ lbl6 = tk.Label(marco, text="")
 lbl6.pack()
 lbl6.config(background="#000000")
 lbl6.config(foreground="#410eff")
-lbl6.place(x=600, y=75)
+lbl6.place(x=400, y=75)
 
 lbl7 = tk.Label(marco, text="Coef X")
 lbl7.pack()
