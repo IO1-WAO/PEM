@@ -431,10 +431,13 @@ class Inecuaciones(Calcular_Puntos):
     def iniciar(self):
         # Creando los campos para las inecuaciones
         for i in range(self.__numIne):
-            self.__Enteros[i] = tk.Checkbutton(marco, width=7)
-            self.__Enteros[i].pack()
-            self.__Enteros[i].place(x=250, y=i * 30 + 125)
-            self.__Enteros[i].configure(background ="#000000")
+            print(self.__numIne)
+            print(i)
+            if (i == int(self.__numIne) - 1) | (i == int(self.__numIne) -2):
+                self.__Enteros[i] = tk.Checkbutton(marco, width=7)
+                self.__Enteros[i].pack()
+                self.__Enteros[i].place(x=250, y=i * 30 + 125)
+                self.__Enteros[i].configure(background ="#000000")
             for j in range(4):
                 self.__Inecuaciones[i][j] = tk.Entry(marco, width=7)
                 self.__Inecuaciones[i][j].pack()
