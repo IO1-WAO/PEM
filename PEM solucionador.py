@@ -14,8 +14,10 @@ import numpy as np
 from matplotlib import pyplot as plt
 
 colores = ('C0', 'C1', 'C2', 'C3', 'C4', 'C5', 'C6')
-
-
+a = False
+b = False
+ca = 1
+cb = 1
 # Clase para describir cada punto
 class punto:
     def __init__(self, x, y):
@@ -385,7 +387,12 @@ class Calcular_Puntos(object):
                                  xy=(intersex[pval][0], intersex[pval][1]), xycoords='data',
                                  xytext=(25, 25), textcoords='offset points', fontsize=12,
                                  arrowprops=dict(arrowstyle="->", connectionstyle="arc3,rad=.2"))
-
+                    global a
+                    global b
+                    if(a == True):
+                        intersex[pval][0] = round(intersex[pval][0])
+                    if(b == True):
+                        intersex[pval][1] = round(intersex[pval][0])
                     #
                     texto = "Valor máximo: " + str(num_max) + "    (x = " + str(intersex[pval][0]) + ", y = " + str(
                         intersex[pval][1]) + ")"
@@ -410,6 +417,7 @@ class Calcular_Puntos(object):
 
 # Clase donde se crean los campos para las inecuaciones
 class Inecuaciones(Calcular_Puntos):
+
     def __init__(self, x):
         # Atributos
 
@@ -426,15 +434,20 @@ class Inecuaciones(Calcular_Puntos):
             self.__Enteros.append([])
             for j in range(4):
                 self.__Inecuaciones[i].append(None)
-                self.__Enteros[i].append(None)
+                if i%2==0:
+                    self.__Enteros[i].append(None)
 
     def iniciar(self):
         # Creando los campos para las inecuaciones
         for i in range(self.__numIne):
-            print(self.__numIne)
-            print(i)
             if (i == int(self.__numIne) - 1) | (i == int(self.__numIne) -2):
-                self.__Enteros[i] = tk.Checkbutton(marco, width=7)
+                if (i == int(self.__numIne) - 1):
+                    self.checkbutton2 = IntVar
+                    self.__Enteros[i] = tk.Checkbutton(marco, width=7, variable = self.checkbutton2,onvalue = 1,offvalue=0,command = self.checkbuttonb)
+
+                if (i == int(self.__numIne) -2):
+                    self.checkbutton1 = IntVar
+                    self.__Enteros[i] = tk.Checkbutton(marco, width=7, variable = self.checkbutton1,onvalue = 1,offvalue=0,command = self.checkbuttona)
                 self.__Enteros[i].pack()
                 self.__Enteros[i].place(x=250, y=i * 30 + 125)
                 self.__Enteros[i].configure(background ="#000000")
@@ -466,6 +479,34 @@ class Inecuaciones(Calcular_Puntos):
         self.__Inecuaciones[self.__numIne - 1][1].config(state="readonly")
         self.__Inecuaciones[self.__numIne - 1][3].insert(0, "0")
         self.__Inecuaciones[self.__numIne - 1][3].config(state="readonly")
+
+    @staticmethod
+    def checkbuttona():
+        global ca
+        global a
+        print(ca)
+        if(ca %2==0):
+            print('a falso')
+            a = False
+            ca = 1
+        else:
+            print('a verdadero')
+            a = True
+            ca += 1
+
+    @staticmethod
+    def checkbuttonb():
+        global cb
+        global b
+        print(cb)
+        if (cb % 2 == 0):
+            print('b falso')
+            b = False
+            cb = 1
+        else:
+            print('b verdadero')
+            b = True
+            cb += 1
 
     def hacer_algo(self):
         # Llamando a la clase Calcular_Puntos
