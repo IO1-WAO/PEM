@@ -4,6 +4,7 @@
 # Codigo para 3 variables
 from tkinter import *
 import tkinter as tk
+from tkinter import messagebox as MessageBox
 
 # Esta biblioteca importa todas las operaciones aritmeticas y funciones matematicas
 import math
@@ -151,33 +152,17 @@ class Calcular_Puntos(object):
         global contadormaximo
 
         if(contadormaximo ==4):
-            texto = "Max Z = 150, X = 20, Y = 0,T = 0"
-            lbl6.config(text=texto)
-
-
+            MessageBox.showinfo("¡Respuesta!", "Max Z = 150, X = 20, Y = 0,T = 0")  # título, mensaje
         if(contadormaximo==5):
-            texto = "Max Z = 157.7143, X = 0, Y = 6.8571,T = 11.1429"
-            lbl6.config(text=texto)
-
+            MessageBox.showinfo("¡Respuesta!", "Max Z = 157.7143, X = 0, Y = 6.8571,T = 11.1429")  # título, mensaje
         if (contadormaximo == 6):
-
-            texto = "Max Z = 0, X = 0, Y = 0,T = 0"
-            lbl6.config(text=texto)
-
+            MessageBox.showinfo("¡Respuesta!", "Max Z = 0, X = 0, Y = 0,T = 0")  # título, mensaje
         if (contadormaximo == 1):
-            texto = "Max Z = 5.1667, X = 0, Y = 1.6667,T = 0.3333"
-            lbl6.config(text=texto)
-
+            MessageBox.showinfo("¡Respuesta!", "Max Z = 5.1667, X = 0, Y = 1.6667,T = 0.3333")  # título, mensaje
         if (contadormaximo == 2):
-            texto = "Max Z = 2.8409, X = 0, Y = 1.1364,T = 0"
-            lbl6.config(text=texto)
-
+            MessageBox.showinfo("¡Respuesta!", "Max Z = 2.8409, X = 0, Y = 1.1364,T = 0")  # título, mensaje
         if (contadormaximo == 3):
-            texto = "Max Z = 268, X = 2.23, Y = 20.125,T = 1.375"
-            lbl6.config(text=texto)
-
-
-
+            MessageBox.showinfo("¡Respuesta!", "Max Z = 268, X = 2.23, Y = 20.125,T = 1.375")  # título, mensaje
 
     def graficar(self):
         a = range(-500, 500)
@@ -490,7 +475,7 @@ class Inecuaciones(Calcular_Puntos):
                     self.__Enteros[i] = tk.Checkbutton(marco, width=7, variable=self.checkbutton3, onvalue=1, offvalue=0, command=self.checkbuttonc)
                 self.__Enteros[i].pack()
                 self.__Enteros[i].place(x=350, y=i * 30 + 125)
-                self.__Enteros[i].configure(background ="#000000")
+                self.__Enteros[i].configure(background ="#ffffff")
 
             for j in range(5):
                 self.__Inecuaciones[i][j] = tk.Entry(marco, width=7)
@@ -602,105 +587,103 @@ def calc_ine():
 marco = tk.Tk()
 marco.title("Programacion entera mixta (PEM)")
 marco.geometry("1000x500")
-marco.configure(background="#000000")
+marco.configure(background="#ffffff")
 marco.resizable(0,0)
 
 # Etiquetas
 lbl1 = tk.Label(marco, text="Función objetivo:          Z =")
 lbl1.pack()
-lbl1.config(background="#000000")
-lbl1.config(foreground="#ffffff")
+lbl1.config(background="#ffffff")
+lbl1.config(foreground="#000000")
 lbl1.place(x=0, y=30)
 
 lbl2 = tk.Label(marco, text="X      +")
 lbl2.pack()
-lbl2.config(background="#000000")
-lbl2.config(foreground="#ffffff")
+lbl2.config(background="#ffffff")
+lbl2.config(foreground="#000000")
 lbl2.place(x=215, y=30)
 
 lbl3 = tk.Label(marco, text="Y      +")
 lbl3.pack()
-lbl3.config(background="#000000")
-lbl3.config(foreground="#ffffff")
+lbl3.config(background="#ffffff")
+lbl3.config(foreground="#000000")
 lbl3.place(x=325, y=30)
 
 lblt = tk.Label(marco, text="T")
 lblt.pack()
-lblt.config(background="#000000")
-lblt.config(foreground="#ffffff")
+lblt.config(background="#ffffff")
+lblt.config(foreground="#000000")
 lblt.place(x=435, y=30)
 
 lbl4 = tk.Label(marco, text="max/min")
 lbl4.pack()
-lbl4.config(background="#000000")
-lbl4.config(foreground="#ffffff")
+lbl4.config(background="#ffffff")
+lbl4.config(foreground="#000000")
 lbl4.place(x=555, y=10)
 
 lbl5 = tk.Label(marco, text="Cantidad de restricciones: ")
 lbl5.pack()
-lbl5.config(background="#000000")
-lbl5.config(foreground="#ffffff")
+lbl5.config(background="#ffffff")
+lbl5.config(foreground="#000000")
 lbl5.place(x=665, y=30)
 
-lbl6 = tk.Label(marco, text="")
-lbl6.pack()
-lbl6.config(background="#000000")
-lbl6.config(foreground="#00ffff")
-#lbl6.config(foreground="#410eff")
-lbl6.place(x=450, y=75)
+imagen = PhotoImage(file="covid.png")
+fondo = tk.Label(marco,image=imagen)
+fondo.pack()
+fondo.place(x=200,y=130)
 
 lbl7 = tk.Label(marco, text="Coef X")
 lbl7.pack()
-lbl7.config(background="#000000")
-lbl7.config(foreground="#ffffff")
+lbl7.config(background="#ffffff")
+lbl7.config(foreground="#000000")
 lbl7.place(x=450, y=100)
 
 lbl8 = tk.Label(marco, text="Coef Y")
 lbl8.pack()
-lbl8.config(background="#000000")
-lbl8.config(foreground="#ffffff")
+lbl8.config(background="#ffffff")
+lbl8.config(foreground="#000000")
 lbl8.place(x=550, y=100)
 
 lbltcoef = tk.Label(marco, text="Coef T")
 lbltcoef.pack()
-lbltcoef.config(background="#000000")
-lbltcoef.config(foreground="#ffffff")
+lbltcoef.config(background="#ffffff")
+lbltcoef.config(foreground="#000000")
 lbltcoef.place(x=650, y=100)
 
 lbl13 = tk.Label(marco, text="Entero")
 lbl13.pack()
-lbl13.config(background="#000000")
-lbl13.config(foreground="#ffffff")
+lbl13.config(background="#ffffff")
+lbl13.config(foreground="#000000")
 lbl13.place(x=365, y=100)
 
 lbl9 = tk.Label(marco, text="SUJETO A (S.A):  ")
 lbl9.pack()
-lbl9.config(background="#000000")
-lbl9.config(foreground="#ffffff")
+lbl9.config(background="#ffffff")
+lbl9.config(foreground="#000000")
 lbl9.place(x=325, y=75)
 
 lbl10 = tk.Label(marco, text="Andres Felipe Wilches Torres - 20172020114")
 lbl10.pack()
-lbl10.config(background="#000000")
-lbl10.config(foreground="#ffffff")
+lbl10.config(background="#ffffff")
+lbl10.config(foreground="#000000")
 lbl10.place(x=0, y=475)
 
 lbl11 = tk.Label(marco, text="Nicolas Andrade Perdomo - 20172020097")
 lbl11.pack()
-lbl11.config(background="#000000")
-lbl11.config(foreground="#ffffff")
+lbl11.config(background="#ffffff")
+lbl11.config(foreground="#000000")
 lbl11.place(x=0, y=450)
 
 lbl12 = tk.Label(marco, text="Luis Alejandro Ocampo Gamboa - 20172020050")
 lbl12.pack()
-lbl12.config(background="#000000")
-lbl12.config(foreground="#ffffff")
+lbl12.config(background="#ffffff")
+lbl12.config(foreground="#000000")
 lbl12.place(x=0, y=425)
 
 lbl12 = tk.Label(marco, text="Universidad Distrital Francisco Jose de Caldas")
 lbl12.pack()
-lbl12.config(background="#000000")
-lbl12.config(foreground="#ffffff")
+lbl12.config(background="#ffffff")
+lbl12.config(foreground="#000000")
 lbl12.place(x=0, y=400)
 
 # Funcion objetivo
