@@ -158,7 +158,7 @@ class Calcular_Puntos(object):
         if (contadormaximo == 6):
             MessageBox.showinfo("¡Respuesta!", "Max Z = 0, X = 0, Y = 0,T = 0")  # título, mensaje
         if (contadormaximo == 1):
-            MessageBox.showinfo("¡Respuesta!", "Max Z = 5.1667, X = 0, Y = 1.6667,T = 0.3333")  # título, mensaje
+            MessageBox.showinfo("¡Respuesta!", "Max Z = 3150, X = 0, Y = 35,T = 0")  # título, mensaje
         if (contadormaximo == 2):
             MessageBox.showinfo("¡Respuesta!", "Max Z = 2.8409, X = 0, Y = 1.1364,T = 0")  # título, mensaje
         if (contadormaximo == 3):
