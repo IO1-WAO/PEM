@@ -5,6 +5,8 @@
 </dd>
 <h2>Integrantes:</h2>
 <h3>Andres Felipe Wilches Torres -20172020114, Nicolas Andrade Perdomo - 20172020097 y Luis Alejandro Ocampo Gamboa - 20172020050</h3>
+<h2><a href="https://www.youtube.com/watch?v=B_7VLaLXhr0&t=841s">Link al video proyecto final</a></h2>
+
 
   <dt>
             <h3>Tabla de contenidos</h3>
