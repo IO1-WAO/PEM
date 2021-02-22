@@ -27,7 +27,7 @@ class punto:
         return "(" + str(self.px) + "," + str(self.py) + ")"
 
 
-# Halla interseccion entre dos rectas
+# Halla interseccion entre rectas
 class linea:
     def __init__(self, p0, p1):
         self.p0 = p0
@@ -145,7 +145,7 @@ class Calcular_Puntos(object):
     def grafico(self):
         global contadormaximo
         if (contadormaximo == 1):
-            MessageBox.showinfo("¡Respuesta!", "Max Z = -52.267’014.800, XB1 = 4, XB2 = 9 ,XB3 = 9")  # título, mensaje
+            MessageBox.showinfo("¡Respuesta!", "Min Z = -52.267’014.800, XB1 = 4, XB2 = 9 ,XB3 = 9")  # título, mensaje
 
     def graficar(self):
         a = range(-500, 500)
