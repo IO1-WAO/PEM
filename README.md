@@ -4,7 +4,11 @@
     <img style="width: 700px; height: 400px;" src="https://user-images.githubusercontent.com/54086394/97124079-b0e06e00-16fc-11eb-934e-9f24517ca4d2.png" alt="Hola">
 </dd>
 <h2>Integrantes:</h2>
-<h3>Andres Felipe Wilches Torres -20172020114, Nicolas Andrade Perdomo - 20172020097 y Luis Alejandro Ocampo Gamboa - 20172020050</h3>
+<li>
+    <ul>Andres Felipe Wilches Torres -20172020114</ul>
+    <ul>Nicolas Andrade Perdomo - 20172020097</ul>
+    <ul>Luis Alejandro Ocampo Gamboa - 20172020050</ul>
+</li>
 <h2><a href="https://youtu.be/9VQdrDz1dq4">Link al video proyecto final</a></h2>
 
 
